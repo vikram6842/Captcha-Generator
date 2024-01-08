@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background_color: rgb(44, 213, 251);
+  --container_bg_color: rgb(244, 244, 237);
+  --background_: rgb(166, 88, 238);
+
+  --container_box_shadow: rgb(208, 243, 156);
+  --box_shadow: rgb(192, 140, 240);
+  --box_shadow_inset: rgb(254, 250, 250);
+
+  --color: rgb(243, 247, 249);
+  --color_button: rgb(129, 133, 136);
+  --color_: rgb(238, 243, 248);
+
+  --font_size: 1rem;
+  --font_weight: 800;
+
+  --border_radius: 8px;
+
+  --px: 12px;
+
+  --transition_button: all 0.5s ease-in-out;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  background: var(--background_color);
+  font-size: var(--font_size);
+  font-weight: var(--font_weight);
+  box-shadow: inset 0 0 70px 20px var(--box_shadow_inset);
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  background: var(--container_bg_color);
+  padding: 15px 30px 20px;
+  border-radius: var(--border_radius);
+  box-shadow: 0 0 12px 6px var(--container_box_shadow);
+}
+
+h1 {
+  color: var(--color);
+  margin-bottom: var(--px);
+  text-align: center;
+  font-size: var(--font_size);
+}
+p {
+  text-align: center;
+  margin-bottom: var(--px);
+  color: var(--color);
+}
+
+.captch_gain {
+  text-align: center;
+  margin-bottom: var(--px);
+}
+
+.captch_gain input,
+.captch_gain button:nth-child(1) {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  height: 40px;
+  padding-left: var(--px);
+  color: var(--color_button);
+}
+.captch_gain input {
+  border: 1px solid var(--color_button);
+}
+.captch_gain:first-child {
+  width: 60%;
+  height: 40px;
+  background: var(--background_);
+  padding: 3px;
+  border-radius: 4px;
+  box-shadow: 0 0 1px 2px var(--box_shadow);
+}
+
+.captch_btn button {
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: rgb(70, 73, 71);
+  transform: scale(1);
+  transition: var(--transition_button);
+}
+
+.captch_btn button:active {
+  transform: scale(0.96);
+}
+
+.display {
+  font-size: 1rem;
+  font-weight: var(--font_weight);
+  letter-spacing: 2px;
+  padding: 5px 10px;
+  margin-inline-end: 3px;
+  display: inline-block;
+}
+
+.refress_btn {
+  width: 30%;
+  border: none;
+  outline: none;
+  background: none;
+  color: var(--color_);
+  cursor: pointer;
+  transition: var(--transition_button);
+}
+
+.refress_btn:active {
+  transform: scale(0.72);
+}
+
+#message {
+  text-align: left;
+  font-weight: 300;
+  font-size: 0.8rem;
+  letter-spacing: 0.3px;
+}
