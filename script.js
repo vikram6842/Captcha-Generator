@@ -132,7 +132,6 @@ function generator() {
     function captchButtonClick(e) {
         e.preventDefault()
         captcha = captch_set.value.split('').filter((char) => char != ' ').join('')
-        console.log(captcha)
         if (captchOplicty() !== captcha) {
             message.innerText = 'Entered captcha is not correct'
             message.style.color = 'red'
@@ -140,6 +139,7 @@ function generator() {
             message.innerText = 'Entered captcha is  correct'
             message.style.color = 'black'
         }
+        generateChaptch()
     }
 
     refress_btn.addEventListener('click', refress_button)
