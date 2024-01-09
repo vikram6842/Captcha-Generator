@@ -124,8 +124,7 @@ function generator() {
 
 
     const captchOplicty = function () {
-        const captch_get = document.querySelector('.captch_get p');
-        return captch_get.innerText.replace(/\s/g, '')
+        return captch_get.innerText.trim()
     }
 
     function captchButtonClick(e) {
@@ -144,7 +143,6 @@ function generator() {
             generateChaptch()
         }
     }
-    console.log(captch_get.parentElement.lastChild)
     refress_btn.addEventListener('click', refress_button)
     captch_btn.addEventListener('click', captchButtonClick)
     generateChaptch()
