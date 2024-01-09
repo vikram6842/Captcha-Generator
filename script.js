@@ -1,5 +1,4 @@
 function generator() {
-
     function container() {
         const div = document.createElement('div')
         const h1 = document.createElement('h1')
@@ -95,13 +94,13 @@ function generator() {
     container()
     createCaptchGain()
     createMessage()
+    const parents = document.querySelector('.captch_get')
 
-
-    const captch_get = document.querySelector('.captch_get p');
-    const refress_btn = document.querySelector('.refress_btn');
-    const captch_set = document.querySelector('.captch_set input');
-    const message = document.querySelector('#message');
-    const captch_btn = document.querySelector('.captch_btn');
+    const captch_get = parents.firstChild   //p
+    const refress_btn = parents.lastChild   //button of refress_btn
+    const captch_set = parents.nextElementSibling.children[0]   //input
+    const message = parents.nextElementSibling.nextElementSibling   //message
+    const captch_btn = message.nextElementSibling   //button in captch_btn
     let captcha = null;
 
 
@@ -139,12 +138,15 @@ function generator() {
             message.innerText = 'Entered captcha is  correct'
             message.style.color = 'black'
         }
-        generateChaptch()
-    }
 
+
+        if (window.innerWidth < 500) {
+            generateChaptch()
+        }
+    }
+    console.log(captch_get.parentElement.lastChild)
     refress_btn.addEventListener('click', refress_button)
     captch_btn.addEventListener('click', captchButtonClick)
-
     generateChaptch()
 }
 
