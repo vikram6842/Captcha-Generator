@@ -124,7 +124,7 @@ function generator() {
 
 
     const captchOplicty = function () {
-        return captch_get.innerText.trim()
+        return captch_get.innerText.replace(/\s/g, '')
     }
 
     function captchButtonClick(e) {
